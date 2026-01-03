@@ -52,7 +52,16 @@
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 Moodlecat. All cats are dreaming.</p>
+    <p>&copy; <span id="year"></span>  Moodlecat. All cats are dreaming.</p>
   </footer>
+    
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+  </script>
 </body>
+
+
+
 </html>
