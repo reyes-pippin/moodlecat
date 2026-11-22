@@ -10,11 +10,11 @@
 
   <meta name="robots" content="index, follow" />
 
-  <title>Moodlecat · A Shanghai Bird Product</title>
+  <title>Moodlecat · Visual Memory of Everyday Life</title>
 
   <meta
     name="description"
-    content="Moodlecat is a gentle creative app by Shanghai Bird. Draw a cat, save a feeling, seal it in a time capsule, and rediscover it in the future."
+    content="Moodlecat is Shanghai Bird's visual memory project. Draw a moment, save a feeling, and meet it again."
   />
 
   <meta
@@ -94,8 +94,19 @@
   </script>
 </head>
 
-<body>
+<body class="lang-en">
   <header>
+    <button
+      id="lang-switch"
+      class="lang-switch-btn"
+      type="button"
+      aria-label="Switch language"
+    >
+      <span class="zh-label">中文</span>
+      <span aria-hidden="true"> · </span>
+      <span class="en-label active">EN</span>
+    </button>
+
     <div class="product-owner">
       <a
         href="https://shanghaibird.com/"
@@ -108,93 +119,191 @@
 
     <h1>Moodlecat</h1>
 
-    <p class="tagline">
-      Draw a cat. Save a feeling. Unlock it in time.
+    <p class="tagline en">
+      Draw a moment. Save a feeling. Meet it again.
+    </p>
+
+    <p class="tagline zh">
+      画下此刻，保存感受，在未来重新遇见它。
     </p>
 
     <nav aria-label="Primary navigation">
-      <a href="#about">About</a>
-      <a href="#features">Features</a>
-      <a href="#community">Community</a>
-      <a href="#studio">Studio</a>
-      <a href="#join">Coming Soon</a>
+      <a class="en" href="#about">About</a>
+      <a class="zh" href="#about">关于</a>
+      <a class="en" href="#products">Products</a>
+      <a class="zh" href="#products">产品</a>
+      <a class="en" href="#roadmap">Roadmap</a>
+      <a class="zh" href="#roadmap">开发计划</a>
     </nav>
   </header>
 
   <main>
     <section id="about">
-      <h2>What is Moodlecat?</h2>
+      <h2 class="en">Visual Memory of Everyday Life</h2>
+      <h2 class="zh">日常生活的视觉记忆</h2>
 
-      <p>
-        Moodlecat is a playful and emotional drawing app where
-        you create a small cat doodle to capture your mood.
-        Each cat is sealed inside a time capsule that can be
-        unlocked in a week, a month, or even a year.
+      <p class="en">
+        Moodlecat began with a very small idea: draw a cat that
+        captures how you feel today, seal it inside a time capsule,
+        and meet it again in a week, a month, or a year.
       </p>
 
-      <p>
-        While your cat sleeps, others may see it and respond
-        gently with a few emojis or short tags. You cannot read
-        your own cat again until it wakes.
+      <p class="zh">
+        Moodlecat 最初来自一个很小的想法：画一只代表今天心情的猫，
+        把它封进时间胶囊，在一周、一个月或一年之后重新遇见它。
       </p>
 
-      <p>
-        Moodlecat is designed as a quiet space for relaxing
-        doodles, private reflection, and rediscovering moments
-        that might otherwise be forgotten.
-      </p>
-    </section>
-
-    <section id="features">
-      <h2>Core Features</h2>
-
-      <ul>
-        <li>
-          ✨ Create relaxing daily cat doodles
-        </li>
-
-        <li>
-          ⏳ Lock each drawing for 7, 30, or 365 days
-        </li>
-
-        <li>
-          🌌 Let sleeping cats rest in your personal star map
-        </li>
-
-        <li>
-          👀 View sleeping cats shared by other people
-        </li>
-
-        <li>
-          💬 Respond gently with emojis and short tags
-        </li>
-
-        <li>
-          🪐 Unlock your cat later and rediscover how you felt
-        </li>
-      </ul>
-    </section>
-
-    <section id="community">
-      <h2>A Gentle Community</h2>
-
-      <p>
-        Moodlecat is not built around likes, follower counts,
-        rankings, or public popularity.
+      <p class="en">
+        But everyday memories are more than moods. A strange
+        conversation, a tiny accident, a joke, or an ordinary day
+        can all become something worth remembering.
       </p>
 
-      <p>
-        It is designed around quiet presence, shared moments,
-        and small anonymous responses. Its world is filled with
-        sleeping cats, each holding someone's private moment
-        until it is ready to wake.
+      <p class="zh">
+        但日常记忆并不只有情绪。它也可能是一句奇怪的对话、一个小意外、
+        一个笑话，或者某个后来突然觉得值得留下来的普通日子。
+      </p>
+
+      <p class="en">
+        Moodlecat is growing into a visual memory project: a place
+        for turning fleeting moments into doodles, expressions,
+        comics and visual stories. Draw → Save → Rediscover.
+      </p>
+
+      <p class="zh">
+        Moodlecat 正在逐渐成为一个视觉记忆项目：把容易消失的瞬间转化成
+        涂鸦、表情、漫画和视觉故事。画下来 → 保存 → 再次遇见。
       </p>
     </section>
 
-    <section id="studio">
-      <h2>Created by Shanghai Bird</h2>
+    <section id="products">
+      <h2 class="products-title en">Products</h2>
+      <h2 class="products-title zh">产品</h2>
 
-      <p>
+      <p class="products-intro en">
+        Moodlecat is developing two connected products for turning
+        everyday life into visual memories.
+      </p>
+
+      <p class="products-intro zh">
+        Moodlecat 正在开发两个相互连接的产品，
+        把日常生活转化成可以再次遇见的视觉记忆。
+      </p>
+
+      <div class="product-subsection">
+      <h2 class="product-name en">SimpleComic</h2>
+      <h2 class="product-name zh">SimpleComic / 简单漫画</h2>
+
+      <p class="product-kicker">
+        MoodleCat Story
+      </p>
+
+      <p class="en">
+        A simple drawing and comic-making app for turning everyday
+        moments into visual stories. Built for iPad, it moves from
+        expressions and stickers to single-panel comics and longer
+        sequences.
+      </p>
+
+      <p class="zh">
+        一个把日常瞬间画成视觉故事的简单漫画创作 App。
+        它主要面向 iPad，从简单表情、贴纸和单格漫画，到更完整的连续漫画，
+        都可以在这里慢慢完成。
+      </p>
+
+      <p class="en">
+        We are building it around the way we actually draw: with
+        Apple Pencil, simple storytelling tools, and as little
+        friction as possible between remembering something and
+        drawing it down. Ordinary life deserves a visual form.
+      </p>
+
+      <p class="zh">
+        我们按照自己真正每天画画的方式设计它：Apple Pencil、简单的故事工具，
+        以及尽可能缩短“突然想起一件事”和“真正把它画下来”之间的距离。
+        普通生活也值得拥有一种可以被留下来的视觉形式。
+      </p>
+      </div>
+
+      <div class="product-links">
+        <a class="product-link-card" href="simplecomic/index.html" target="_blank" rel="noopener noreferrer">
+          <strong class="en">SimpleComic</strong>
+          <strong class="zh">SimpleComic / 简单漫画</strong>
+          <span class="en">MoodleCat Story · iPad drawing and comic-making app ↗</span>
+          <span class="zh">MoodleCat Story · 面向 iPad 的绘画与漫画创作 App ↗</span>
+        </a>
+
+        <a class="product-link-card" href="#moments">
+          <strong>Moodlecat Moments</strong>
+          <span class="en">Visual memories, doodles and time capsules ↓</span>
+          <span class="zh">视觉记录、涂鸦与时间胶囊 ↓</span>
+        </a>
+      </div>
+
+      <div id="moments" class="product-subsection">
+        <h2 class="product-name en">Moodlecat Moments</h2>
+        <h2 class="product-name zh">Moodlecat Moments</h2>
+
+        <p class="product-kicker">
+          <span class="en">Visual memory and time capsules</span>
+          <span class="zh">视觉记忆与时间胶囊</span>
+        </p>
+
+        <p class="en">
+          Capture a feeling before it disappears. Draw a small cat,
+          doodle or expression, then seal it for 7 days, 30 days or
+          365 days. While it sleeps, the memory rests in your personal
+          star map. When it wakes, it returns with a small piece of
+          the person you were when you made it.
+        </p>
+
+        <p class="zh">
+          在感受消失之前，把它画下来。画一只猫、一幅小涂鸦，或者一个代表此刻的表情，
+          然后把它封存 7 天、30 天或 365 天。在时间胶囊沉睡期间，记忆会停留在你的个人星图里。
+          等它醒来时，它会带回一点当时的你。
+        </p>
+
+        <ul>
+          <li class="en">✨ Draw a mood or moment with a quick doodle</li>
+          <li class="zh">✨ 用简单的涂鸦捕捉此刻的情绪或经历</li>
+          <li class="en">⏳ Lock each drawing for 7, 30, or 365 days</li>
+          <li class="zh">⏳ 把每幅画封存 7 天、30 天或 365 天</li>
+          <li class="en">🌌 Let sleeping cats rest in your personal star map</li>
+          <li class="zh">🌌 让睡着的猫停留在属于你的个人星图里</li>
+          <li class="en">💬 Share gently with emojis and short tags</li>
+          <li class="zh">💬 用 Emoji 或短标签轻轻回应</li>
+          <li class="en">🪐 Rediscover the feeling when the capsule wakes</li>
+          <li class="zh">🪐 等时间胶囊醒来，再次遇见当时的感受</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="roadmap">
+      <h2 class="en">Roadmap</h2>
+      <h2 class="zh">开发计划</h2>
+
+      <p class="en">
+        SimpleComic is currently being prepared for release.
+        It is being developed as the richer iPad experience within
+        MoodleCat Story, while Moodlecat Moments remains the lighter
+        visual-memory and time-capsule experience. Both are evolving
+        as we draw, test and learn from real use. Moodlecat Moments is also
+        currently in development.
+      </p>
+
+      <p class="zh">
+        SimpleComic 目前正在准备发布。它是 MoodleCat Story 旗下、
+        主要面向 iPad 的完整绘画与漫画创作体验；Moodlecat Moments
+        则继续作为更轻量的视觉记录与时间胶囊体验。两个方向都会随着真实创作、
+        测试和使用反馈不断演化。Moodlecat Moments 也正在开发中。
+      </p>
+    </section>
+
+    <section id="about-brand">
+      <h2 class="en">Created by Shanghai Bird</h2>
+      <h2 class="zh">由 Shanghai Bird 创作</h2>
+
+      <p class="en">
         Moodlecat is a digital product created by
         <a
           href="https://shanghaibird.com/"
@@ -210,13 +319,27 @@
         </strong>.
       </p>
 
-      <p>
-        Shanghai Bird develops software applications,
-        creative digital products, visual experiences,
-        and urban cultural projects from Shanghai.
+      <p class="zh">
+        Moodlecat 是 Shanghai Bird 旗下的视觉记忆项目。Shanghai Bird 围绕一个长期问题开发软件、
+        视觉体验与实体产品：记忆如何变成可以被看见、重新遇见，甚至最终被触摸的东西？
+        Moodlecat 探索的是其中关于视觉表达的一部分。
       </p>
 
-      <p>
+      <p class="en">
+        Shanghai Bird builds software, visual experiences and
+        cultural projects around one long-term question: how can
+        memory become something we can see, revisit — and eventually
+        touch? Moodlecat explores the visual side of that question.
+      </p>
+
+      <p class="zh">
+        产品或商务合作请联系
+        <a href="mailto:contact@shanghaibird.com" style="color:#fff;">
+          contact@shanghaibird.com
+        </a>。
+      </p>
+
+      <p class="en">
         For product and business enquiries, contact
         <a href="mailto:contact@shanghaibird.com" style="color:#fff;">
           contact@shanghaibird.com
@@ -224,15 +347,6 @@
       </p>
     </section>
 
-    <section id="join">
-      <h2>Coming Soon</h2>
-
-      <p>
-        We are currently crafting the first prototype of
-        Moodlecat. Product details and features may continue
-        to change during development.
-      </p>
-    </section>
   </main>
 
   <footer>
@@ -240,11 +354,13 @@
       <p>
         &copy;
         <span id="year"></span>
-        Moodlecat. All cats are dreaming.
+        <span class="en">Moodlecat. All cats are dreaming.</span>
+        <span class="zh">Moodlecat。所有猫咪都在做梦。</span>
       </p>
 
       <p>
-        A product by
+        <span class="en">A visual memory project by</span>
+        <span class="zh">视觉记忆项目，由</span>
         <a
           href="https://shanghaibird.com/"
           target="_blank"
@@ -255,8 +371,8 @@
       </p>
 
       <p>
-        Operated by Huyiji Cultural And Creative (Shanghai) Co., Ltd
-        （沪翼集文化创意（上海）有限公司）
+        <span class="en">A Shanghai Bird project.</span>
+        <span class="zh">Shanghai Bird 旗下项目。</span>
       </p>
     </div>
 
@@ -264,22 +380,63 @@
       class="footer-links"
       aria-label="Footer navigation"
     >
-      <a href="https://shanghaibird.com/" target="_blank">
-        Shanghai Bird
+      <a href="https://shanghaibird.com/" target="_blank" rel="noopener noreferrer">
+        <span class="en">Shanghai Bird</span>
+        <span class="zh">Shanghai Bird</span>
       </a>
 
       <a href="mailto:contact@shanghaibird.com">
-        Contact
+        <span class="en">Contact</span>
+        <span class="zh">联系</span>
       </a>
 
-      <!-- Replace this URL with the actual Moodlecat privacy policy URL
-      <a href="/privacy.html">
-        Privacy Policy
-      </a>-->
+      <a href="simplecomic/privacy.html">
+        <span class="en">Privacy Policy</span>
+        <span class="zh">隐私政策</span>
+      </a>
     </nav>
   </footer>
 
   <script>
+    // Language toggle logic. English is the initial language.
+    (function () {
+      var currentLang = "en";
+      var switchButton = document.getElementById("lang-switch");
+      var zhElements = document.querySelectorAll(".zh");
+      var enElements = document.querySelectorAll(".en");
+
+      if (!switchButton) {
+        return;
+      }
+
+      function setLanguage(lang) {
+        currentLang = lang;
+        document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+        document.body.classList.toggle("lang-en", lang === "en");
+        document.body.classList.toggle("lang-zh", lang === "zh");
+
+        document.title = lang === "zh"
+          ? "Moodlecat · 日常生活的视觉记忆"
+          : "Moodlecat · Visual Memory of Everyday Life";
+
+        zhElements.forEach(function (element) {
+          element.style.display = lang === "zh" ? "" : "none";
+        });
+
+        enElements.forEach(function (element) {
+          element.style.display = lang === "en" ? "" : "none";
+        });
+
+        switchButton.querySelector(".zh-label").classList.toggle("active", lang === "zh");
+        switchButton.querySelector(".en-label").classList.toggle("active", lang === "en");
+      }
+
+      setLanguage("en");
+      switchButton.addEventListener("click", function () {
+        setLanguage(currentLang === "en" ? "zh" : "en");
+      });
+    })();
+
     // Set current year in footer
     (function () {
       var yearElement = document.getElementById("year");
