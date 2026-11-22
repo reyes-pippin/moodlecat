@@ -39,12 +39,48 @@ a {
 
 /* Header */
 header {
+  position: relative;
   padding: 3rem 1rem 2.4rem;
 
   text-align: center;
 
   background: #1a1a1a;
   border-bottom: 1px solid #333;
+}
+
+.lang-switch-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+
+  padding: 0.35rem 0.65rem;
+
+  color: #aaa;
+  background: transparent;
+  border: 1px solid #444;
+  border-radius: 999px;
+
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.lang-switch-btn:hover {
+  color: #fff;
+  border-color: #777;
+}
+
+.lang-switch-btn .active {
+  color: #fff;
+  font-weight: 700;
+}
+
+.lang-en .zh {
+  display: none;
+}
+
+.lang-zh .en {
+  display: none;
 }
 
 .product-owner {
@@ -64,6 +100,48 @@ header {
 
 .product-owner a:hover {
   color: #b7b7b7;
+}
+
+.product-kicker {
+  margin-top: -0.45rem;
+  margin-bottom: 1rem;
+
+  color: #888;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+}
+
+.simplecomic-page {
+  width: min(700px, 100%);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 3rem 1rem 4rem;
+}
+
+.simplecomic-lang {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+}
+
+.simplecomic-back {
+  display: inline-block;
+  margin-bottom: 3rem;
+  color: #8d9fc7;
+  text-decoration: none;
+}
+
+.simplecomic-back:hover {
+  color: #c5d2ef;
+  text-decoration: underline;
+}
+
+.simplecomic-page h1 {
+  color: #88aaff;
+}
+
+.simplecomic-page h2 {
+  margin-top: 3rem;
 }
 
 h1 {
@@ -88,6 +166,7 @@ header nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.75rem 1.4rem;
 }
 
@@ -100,6 +179,72 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
+}
+
+.product-links {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 1.4rem;
+}
+
+.product-link-card {
+  display: grid;
+  gap: 0.25rem;
+  padding: 1rem 1.1rem;
+
+  color: #dcdcdc;
+  background: transparent;
+  border: 1px solid #444;
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+
+.product-link-card:hover {
+  background: #1c1c1c;
+  border-color: #777;
+  text-decoration: none;
+}
+
+.product-link-card strong {
+  color: #a07aff;
+  font-size: 1.05rem;
+}
+
+.product-link-card span {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.product-subsection {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+
+  border-top: 1px solid #444;
+}
+
+.products-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.products-intro {
+  color: #aaa;
+}
+
+.product-name {
+  font-size: 1.55rem;
+}
+
+.product-subsection .product-kicker {
+  margin-top: -0.35rem;
+  margin-bottom: 1.1rem;
+}
+
+.product-subsection + .product-links {
+  margin-top: 1.4rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid #333;
 }
 
 /* Main content */
@@ -174,10 +319,10 @@ ul li::before {
 
 /* Section cards */
 #about,
-#features,
-#community,
+#products,
 #studio,
-#join {
+#roadmap,
+#about-brand {
   padding: 1.5rem;
 
   background: #161616;
@@ -185,14 +330,8 @@ ul li::before {
   border-radius: 16px;
 }
 
-#studio {
-  background:
-    linear-gradient(
-      145deg,
-      rgba(136, 136, 255, 0.08),
-      rgba(102, 192, 255, 0.04)
-    ),
-    #161616;
+#products {
+  background: #161616;
 }
 
 #studio strong {
@@ -200,11 +339,11 @@ ul li::before {
 }
 
 /* Coming soon section */
-#join {
-  text-align: center;
+#roadmap {
+  text-align: left;
 }
 
-#join h2 {
+#roadmap h2 {
   display: inline-block;
 }
 
@@ -315,6 +454,11 @@ a:focus-visible {
     padding: 2.2rem 1rem 1.8rem;
   }
 
+  .lang-switch-btn {
+    top: 1rem;
+    right: 1rem;
+  }
+
   h1 {
     font-size: 2.15rem;
   }
@@ -340,10 +484,9 @@ a:focus-visible {
   }
 
   #about,
-  #features,
-  #community,
-  #studio,
-  #join {
+  #products,
+  #roadmap,
+  #about-brand {
     padding: 1.2rem;
     border-radius: 14px;
   }
