@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy · SimpleComic</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="lang-en">
+  <button id="lang-switch" class="lang-switch-btn simplecomic-lang" type="button" aria-label="Switch language">
+    <span class="zh-label">中文</span>
+    <span aria-hidden="true"> · </span>
+    <span class="en-label active">EN</span>
+  </button>
+  <main class="simplecomic-page">
+    <a class="simplecomic-back" href="./index.html">
+      <span class="en">← Back to SimpleComic</span>
+      <span class="zh">← 返回 SimpleComic</span>
+    </a>
+    <h1 class="en">Privacy Policy</h1>
+    <h1 class="zh">隐私政策</h1>
+    <p class="en">
+      The final privacy policy for SimpleComic will be published here before
+      the app is submitted to the App Store.
+    </p>
+    <p class="zh">
+      SimpleComic 的正式隐私政策将在提交 App Store 前发布于此。
+    </p>
+    <p class="en">
+      This page is a placeholder. The completed policy will describe the data
+      the app collects, how it is used, storage and deletion, third-party
+      services, contact details and applicable rights.
+    </p>
+    <p class="zh">
+      当前页面为占位版本。正式政策将说明 App 收集哪些数据、如何使用数据、
+      数据的存储与删除、第三方服务、联系方式以及适用的用户权利。
+    </p>
+  </main>
+  <script>
+    (function () {
+      var currentLang = "en";
+      var button = document.getElementById("lang-switch");
+      var zh = document.querySelectorAll(".zh");
+      var en = document.querySelectorAll(".en");
+      function setLanguage(lang) {
+        currentLang = lang;
+        document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+        document.body.classList.toggle("lang-en", lang === "en");
+        document.body.classList.toggle("lang-zh", lang === "zh");
+        zh.forEach(function (element) { element.style.display = lang === "zh" ? "" : "none"; });
+        en.forEach(function (element) { element.style.display = lang === "en" ? "" : "none"; });
+        button.querySelector(".zh-label").classList.toggle("active", lang === "zh");
+        button.querySelector(".en-label").classList.toggle("active", lang === "en");
+      }
+      setLanguage("en");
+      button.addEventListener("click", function () { setLanguage(currentLang === "en" ? "zh" : "en"); });
+    })();
+  </script>
+</body>
+</html>

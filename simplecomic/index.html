@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SimpleComic · Moodlecat</title>
+  <meta
+    name="description"
+    content="SimpleComic is a simple iPad drawing and comic-making app from Moodlecat."
+  />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    body {
+      min-height: 100vh;
+    }
+
+    .simplecomic-page {
+      width: min(700px, 100%);
+      margin: 0 auto;
+      padding: 3rem 1rem 4rem;
+    }
+
+    .simplecomic-lang {
+      position: fixed;
+      top: 1.25rem;
+      right: 1.25rem;
+    }
+
+    .simplecomic-back {
+      display: inline-block;
+      margin-bottom: 3rem;
+      color: #8d9fc7;
+      text-decoration: none;
+    }
+
+    .simplecomic-back:hover {
+      color: #c5d2ef;
+      text-decoration: underline;
+    }
+
+    .simplecomic-label {
+      margin-bottom: 0.8rem;
+      color: #8d9fc7;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .simplecomic-page h1 {
+      color: #88aaff;
+    }
+
+    .simplecomic-page h2 {
+      margin-top: 3rem;
+    }
+
+    .simplecomic-page p {
+      max-width: 62ch;
+    }
+
+    .simplecomic-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.2rem;
+    }
+
+    .simplecomic-links a {
+      color: #66c0ff;
+    }
+  </style>
+</head>
+<body class="lang-en">
+  <button id="lang-switch" class="lang-switch-btn simplecomic-lang" type="button" aria-label="Switch language">
+    <span class="zh-label">中文</span>
+    <span aria-hidden="true"> · </span>
+    <span class="en-label active">EN</span>
+  </button>
+  <main class="simplecomic-page">
+    <a class="simplecomic-back" href="../index.html">
+      <span class="en">← Back to Moodlecat</span>
+      <span class="zh">← 返回 Moodlecat</span>
+    </a>
+
+    <p class="simplecomic-label">MoodleCat Story</p>
+    <h1>SimpleComic</h1>
+    <p class="en">
+      A simple drawing and comic-making app for turning everyday moments
+      into visual stories. Designed for iPad, Apple Pencil and the way
+      ordinary life becomes worth drawing.
+    </p>
+    <p class="zh">
+      一个把日常瞬间画成视觉故事的简单漫画创作 App。
+      它主要面向 iPad 和 Apple Pencil，让那些值得留下的普通生活被画下来。
+    </p>
+
+    <h2 class="en">About the project</h2>
+    <h2 class="zh">关于项目</h2>
+    <p class="en">
+      SimpleComic is being developed as the richer creative experience
+      within Moodlecat. It is designed to make the distance between
+      remembering something and drawing it down as short as possible.
+    </p>
+    <p class="zh">
+      SimpleComic 是 Moodlecat 旗下更完整的创作体验。
+      它希望尽可能缩短“想起一件事”和“把它画下来”之间的距离。
+    </p>
+
+    <h2 class="en">Release status</h2>
+    <h2 class="zh">发布状态</h2>
+    <p class="en">
+      SimpleComic is currently being prepared for release. Product details,
+      features and the final app name may continue to change during testing.
+    </p>
+    <p class="zh">
+      SimpleComic 目前正在准备发布。产品细节、功能和最终名称，
+      都可能在测试过程中继续调整。
+    </p>
+
+    <h2 class="en">Documents</h2>
+    <h2 class="zh">相关文档</h2>
+    <div class="simplecomic-links">
+      <a href="privacy.html">
+        <span class="en">Privacy Policy · Coming soon</span>
+        <span class="zh">隐私政策 · 即将发布</span>
+      </a>
+      <a href="support.html">
+        <span class="en">Support · Coming soon</span>
+        <span class="zh">支持页面 · 即将发布</span>
+      </a>
+    </div>
+  </main>
+  <script>
+    (function () {
+      var currentLang = "en";
+      var button = document.getElementById("lang-switch");
+      var zh = document.querySelectorAll(".zh");
+      var en = document.querySelectorAll(".en");
+
+      function setLanguage(lang) {
+        currentLang = lang;
+        document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+        document.body.classList.toggle("lang-en", lang === "en");
+        document.body.classList.toggle("lang-zh", lang === "zh");
+        zh.forEach(function (element) {
+          element.style.display = lang === "zh" ? "" : "none";
+        });
+        en.forEach(function (element) {
+          element.style.display = lang === "en" ? "" : "none";
+        });
+        button.querySelector(".zh-label").classList.toggle("active", lang === "zh");
+        button.querySelector(".en-label").classList.toggle("active", lang === "en");
+      }
+
+      setLanguage("en");
+      button.addEventListener("click", function () {
+        setLanguage(currentLang === "en" ? "zh" : "en");
+      });
+    })();
+  </script>
+</body>
+</html>

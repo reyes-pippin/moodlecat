@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support · SimpleComic</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="lang-en">
+  <button id="lang-switch" class="lang-switch-btn simplecomic-lang" type="button" aria-label="Switch language">
+    <span class="zh-label">中文</span>
+    <span aria-hidden="true"> · </span>
+    <span class="en-label active">EN</span>
+  </button>
+  <main class="simplecomic-page">
+    <a class="simplecomic-back" href="./index.html">
+      <span class="en">← Back to SimpleComic</span>
+      <span class="zh">← 返回 SimpleComic</span>
+    </a>
+    <h1 class="en">Support</h1>
+    <h1 class="zh">支持</h1>
+    <p class="en">
+      SimpleComic support information will be published here as the app
+      approaches release.
+    </p>
+    <p class="zh">
+      SimpleComic 的支持信息将在 App 接近发布时发布于此。
+    </p>
+    <p class="en">
+      For now, contact
+      <a href="mailto:contact@shanghaibird.com">contact@shanghaibird.com</a>.
+    </p>
+    <p class="zh">
+      目前如有问题，请联系
+      <a href="mailto:contact@shanghaibird.com">contact@shanghaibird.com</a>。
+    </p>
+  </main>
+  <script>
+    (function () {
+      var currentLang = "en";
+      var button = document.getElementById("lang-switch");
+      var zh = document.querySelectorAll(".zh");
+      var en = document.querySelectorAll(".en");
+      function setLanguage(lang) {
+        currentLang = lang;
+        document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+        document.body.classList.toggle("lang-en", lang === "en");
+        document.body.classList.toggle("lang-zh", lang === "zh");
+        zh.forEach(function (element) { element.style.display = lang === "zh" ? "" : "none"; });
+        en.forEach(function (element) { element.style.display = lang === "en" ? "" : "none"; });
+        button.querySelector(".zh-label").classList.toggle("active", lang === "zh");
+        button.querySelector(".en-label").classList.toggle("active", lang === "en");
+      }
+      setLanguage("en");
+      button.addEventListener("click", function () { setLanguage(currentLang === "en" ? "zh" : "en"); });
+    })();
+  </script>
+</body>
+</html>
