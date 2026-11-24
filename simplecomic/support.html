@@ -54,11 +54,21 @@
   <script>
     (function () {
       var currentLang = "en";
+      var languageStorageKey = "moodlecat.language";
       var button = document.getElementById("lang-switch");
       var zh = document.querySelectorAll(".zh");
       var en = document.querySelectorAll(".en");
+      function getSavedLanguage() {
+        try {
+          var savedLanguage = window.localStorage.getItem(languageStorageKey);
+          return savedLanguage === "zh" || savedLanguage === "en" ? savedLanguage : "en";
+        } catch (error) {
+          return "en";
+        }
+      }
       function setLanguage(lang) {
         currentLang = lang;
+        try { window.localStorage.setItem(languageStorageKey, lang); } catch (error) {}
         document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
         document.body.classList.toggle("lang-en", lang === "en");
         document.body.classList.toggle("lang-zh", lang === "zh");
@@ -67,7 +77,7 @@
         button.querySelector(".zh-label").classList.toggle("active", lang === "zh");
         button.querySelector(".en-label").classList.toggle("active", lang === "en");
       }
-      setLanguage("en");
+      setLanguage(getSavedLanguage());
       button.addEventListener("click", function () { setLanguage(currentLang === "en" ? "zh" : "en"); });
     })();
   </script>
